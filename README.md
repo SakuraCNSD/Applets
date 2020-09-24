@@ -1,0 +1,2 @@
+# Applets
+Wechat applet
