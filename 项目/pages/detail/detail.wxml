@@ -1,0 +1,30 @@
+<view class="detail">
+	<view class="detail-item">
+		<text>昵称：</text>
+		<text>{{detail.nickName}}</text>
+	</view>
+	<view class="detail-item">
+		<text>头像：</text>
+		<text wx:if="{{detail.userPhoto === '未设置' ? true : false}}">{{detail.userPhoto}}</text>
+		<image wx:else src="{{detail.userPhoto}}" bindtap="handleClick" data-url="{{detail.userPhoto}}" />
+	</view>
+	<view class="detail-item">
+		<text>个性签名：</text>
+		<text>{{detail.signature}}</text>
+	</view>
+	<view class="detail-item">
+		<text>手机号：</text>
+		<text>{{detail.phoneNumber}}</text>
+		<comp-icon wx:if="{{detail.phoneNumber === '未设置' ? false : true }}" phoneNumber="{{detail.phoneNumber}}" icon="iconfont icondadianhua" />
+	</view>
+	<view class="detail-item">
+		<text>微信号：</text>
+		<text>{{detail.weixinNumber}}</text>
+		<comp-icon wx:if="{{detail.weixinNumber === '未设置' ? false : true }}" weixin="{{detail.weixinNumber}}" icon="iconfont iconfuzhi" />
+	</view>
+	<view class="detail-btn" wx:if="{{_id !== detail._id}}">
+		<button wx:if="{{isFriend === 1}}" style="width:100%;" type="warn">删除好友</button>
+		<button wx:elif="{{isFriend === -1}}" style="width:100%;" type="primary" bindtap="handleAddFriend">添加好友</button>
+		<button wx:elif="{{isFriend === 0}}" disabled style="width: 100%;">已发送申请</button>
+	</view>
+</view>

@@ -1,0 +1,11 @@
+<movable-area class="movable-area" wx:for="{{addUser}}" wx:key="index">
+	<movable-view class="movable-view" direction="horizontal">
+		<view class="touch-item {{item.isTouch ? 'touch-move-active': ''}}" data-id="{{item._id}}" data-index="{{index}}" bindtap="add" bindtouchstart="touchstart" bindtouchmove="touchmove">
+			<view class="content">
+				<image class="image" src="{{item.userPhoto}}"></image>
+				<text class="nickName">{{item.nickName}}</text>
+			</view>
+			<view class="del" catchtap="del" data-id="{{item._id}}">删除</view>
+		</view>
+	</movable-view>
+</movable-area>

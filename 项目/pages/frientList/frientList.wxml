@@ -1,0 +1,18 @@
+<view class="friendList" hidden="{{!isShow}}">
+	<view wx:if="{{friendList.length > 0}}">
+		<view wx:for="{{friendList}}" wx:key="_id" class="friendList-item">
+			<navigator url="{{'../detail/detail?id=' + item._id}}" open-type="navigate">
+				<view class="friendList-content">
+					<view class="left">
+						<image src="{{item.userPhoto}}"></image>
+						<text>{{item.nickName}}</text>
+					</view>
+					<text class="iconfont iconarrowRight"></text>
+				</view>
+			</navigator>
+		</view>
+	</view>
+	<view wx:else>
+		<no-message>尚未添加好友</no-message>
+	</view>
+</view>

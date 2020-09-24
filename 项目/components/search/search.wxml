@@ -1,0 +1,27 @@
+<view class="{{ isFocus ? 'search-container' : 'search-container-full'}}">
+	<view class="search">
+		<view class="search-text">
+			<text class="iconfont iconsousuo1"></text>
+			<input type="text" placeholder="输入关键字搜索..." bindfocus="handleFocus" bindconfirm="handleConfirm" confirm-type="search" value="{{val}}" bindinput="handleInput" />
+		</view>
+		<view hidden="{{isFocus}}" class="search-cancel" bindtap="handleCancle">取消</view>
+	</view>
+	<view class="search-history">
+		<view class="content" wx:if="{{historyList.length > 0 ? true : false}}">
+			<text>历史记录</text>
+			<text class="iconfont iconshanchu" bindtap="handleDelete"></text>
+		</view>
+		<view class="search-history-btn">
+			<text wx:for="{{historyList}}" wx:key="index" bindtap="handleHistoryItem" data-item="{{item}}">{{item}}</text>
+		</view>
+		<navigator wx:for="{{searchList}}" wx:key="index" url="{{'../../pages/detail/detail?id=' + item._id}}" open-type="navigate">
+			<view class="search-history-item">
+				<view class="left">
+					<image src="{{item.userPhoto}}" />
+					<text>{{item.nickName}}</text>
+				</view>
+				<text class="iconfont iconarrowRight"></text>
+			</view>
+		</navigator>
+	</view>
+</view>

@@ -1,0 +1,15 @@
+.detail{
+  padding: 20rpx;
+}
+.detail .detail-item{
+  padding: 20rpx 0;
+}
+.detail .detail-item image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+  vertical-align: top;
+}
+.detail .detail-btn{
+  padding: 20rpx 0;
+}

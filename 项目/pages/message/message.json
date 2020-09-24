@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "message-list": "../../components/MessageList/MessageList",
+    "no-message": "../../components/noMessage/noMessage"
+  }
+}

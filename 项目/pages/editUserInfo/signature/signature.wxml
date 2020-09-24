@@ -1,0 +1,4 @@
+<view>
+	<input type="text" placeholder="请输入内容..." value="{{signature}}" bindinput="handleText" />
+	<button style="width:100%;" bindtap="handleClick" type="primary">设置个性签名</button>
+</view>

@@ -1,0 +1,7 @@
+.message{
+  height: 100%;
+}
+/* .noMessage{
+  position: relative;
+  height: 100%;
+} */

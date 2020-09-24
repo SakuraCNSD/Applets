@@ -1,0 +1,8 @@
+.message-text{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 48rpx;
+  color: #ccc;
+  transform: translate(-50%, -50%);
+}

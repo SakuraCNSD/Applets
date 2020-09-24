@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "no-message": "../../components/noMessage/noMessage"
+  }
+}

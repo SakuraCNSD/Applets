@@ -1,0 +1,9 @@
+view{
+  margin: 10rpx;
+}
+input{
+  border: 1px solid #b4b5b6;
+  height: 60rpx;
+  padding: 0 10rpx;
+  margin: 10rpx 0;
+}

@@ -1,0 +1,4 @@
+<view>
+	<input type="text" placeholder="请输入微信号" value="{{weixin}}" bindinput="handleText"></input>
+	<button style="width:100%" type="primary" bindtap="handleClick">设置微信号</button>
+</view>

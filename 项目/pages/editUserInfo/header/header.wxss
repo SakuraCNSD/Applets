@@ -1,0 +1,16 @@
+view{
+  margin: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button{
+  margin-top: 10rpx;
+}
+image{
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
+  border: 1px dashed #ddd;
+  padding: 10rpx;
+}

@@ -1,0 +1,8 @@
+<view class="message" hidden="{{isHidden}}">
+	<view wx:if="{{!userMessage.length}}" class="noMessage">
+		<no-message>当前无任何消息</no-message>
+	</view>
+	<view wx:else>
+		<message-list addUserId="{{userMessage}}" bindmyevent="onMyEvent" />
+	</view>
+</view>

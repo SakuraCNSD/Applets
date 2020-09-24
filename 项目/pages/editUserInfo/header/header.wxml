@@ -1,0 +1,5 @@
+<view>
+	<image src="{{userPhoto}}" bindtap="handleUploadImg"></image>
+	<button bindtap="handleClick" style="width: 100%;" type="primary">自定义头像</button>
+	<button open-type="getUserInfo" style="width:100%;" type="primary" bindgetuserinfo="bindgetUserInfo">使用微信头像</button>
+</view>

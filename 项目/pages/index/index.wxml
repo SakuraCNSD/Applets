@@ -1,0 +1,36 @@
+<wxs src="../../utils/util.wxs" module="tools" />
+<search />
+<view class="container">
+	<!-- 轮播图 -->
+	<swiper class="swiper" indicator-dots="{{true}}" autoplay circular>
+		<block wx:for="{{imgUrls}}" wx:for-item="item" wx:key="index">
+			<swiper-item>
+				<image src="{{item.fileId}}" />
+			</swiper-item>
+		</block>
+	</swiper>
+	<!-- 栏目 -->
+	<view class="column">
+		<view class="{{current === 'links'? 'active recommend': 'recommend'}}" bindtap="handleClick" data-current="links">
+			<view class="title">推荐</view>
+		</view>
+		<view class="{{current === 'time'? 'active update': 'update'}}" bindtap="handleClick" data-current="time">
+			<view class="title">最新</view>
+		</view>
+	</view>
+
+	<view class="column-content">
+		<view class="column-content-item" wx:for="{{listData}}" wx:key="id">
+			<image mode="aspectFill" src="{{item.userPhoto}}" bindtap="handleDetail" data-id="{{item._id}}" />
+			<view class="column-content-item-news">
+				<view class="left">
+					<text class="name">{{tools.wordSplit(item.nickName)}}</text>
+				</view>
+				<view class="right">
+					<text class="iconfont icondianzan" bindtap="handleLink" data-id="{{item._id}}"></text>
+					<text class="likes">{{tools.wordSplit(item.links)}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

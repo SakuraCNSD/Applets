@@ -1,0 +1,1 @@
+<text bindtap="handleClick" class="{{ icon }}"></text>
